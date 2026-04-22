@@ -1,46 +1,82 @@
-# 🧠 Comparing Sparse retrieval vs Dense retrieval for Semantic Search
+# 🔎 Semantic Search Engine: Sparse vs Dense Retrieval
 
-This project demonstrates the difference between sparse retrieval (BM25) and dense retrieval (Sentence Transformers) when searching for relevant text documents.
-It highlights how traditional keyword-based search models differ from modern semantic models that understand context and meaning.
+This project demonstrates and compares **traditional keyword-based search (BM25)** with **modern semantic search (Sentence Transformers)** for document retrieval.
 
-##  🚀 Project Overview
+It shows how dense embeddings outperform sparse methods in understanding meaning and context.
 
-This notebook compares two popular text retrieval techniques:
+---
 
-1. BM25 (Sparse Retrieval):
+## 🚀 Live Demo
+👉 Hugging Face Space:  
+https://yokitha-semantic-search-demo.hf.space/
 
-Based on keyword matching using term frequency and inverse document frequency (TF-IDF).
+---
 
-Fails to capture synonyms or contextual relationships between words.
+## 📌 Project Overview
 
- Sentence Transformers (Dense Retrieval):
+This system implements two retrieval techniques:
 
-Uses transformer-based embeddings to represent sentences in a semantic vector space.
+### 1️⃣ Sparse Retrieval (BM25)
+- Based on keyword matching (TF-IDF style ranking)
+- Works well for exact word overlap
+- Fails to understand synonyms and context
 
-Finds documents that are semantically similar to the query, not just keyword matches.
+### 2️⃣ Dense Retrieval (Sentence Transformers)
+- Uses transformer-based embeddings
+- Captures semantic meaning of text
+- Retrieves contextually similar documents even without exact keywords
 
-## 💡 Key Takeaways
+---
 
-BM25 → Good for exact term matches, fast and simple.
+## 💡 Example
 
-Sentence Transformers → Understand meaning, ideal for semantic and contextual search.
+Query:
+> "capital city of France"
 
-Dense retrieval methods are essential for modern AI applications like
+### BM25 Output:
+- Works if exact words match (e.g., "France", "capital")
 
-- Chatbots
+### Dense Retrieval Output:
+- Understands meaning → returns "Paris is the French capital"
 
-- Question Answering
-
-- Retrieval-Augmented Generation (RAG)
+---
 
 ## 🧰 Tech Stack
 
-🐍 Python 3
+- Python 🐍
+- Rank-BM25 (Sparse Retrieval)
+- Sentence Transformers (Hugging Face)
+- NumPy (Vector similarity)
+- Gradio (Web UI)
+- Hugging Face Spaces (Deployment)
 
-📚 rank_bm25 – Sparse retrieval model
+---
 
-🤗 Sentence Transformers (Hugging Face) – Dense embeddings
+## 📊 Key Insights
 
-🧮 NumPy – Vector operations
+- BM25 is fast but keyword-dependent
+- Dense retrieval understands semantics
+- Modern AI systems (RAG, Chatbots, QA systems) rely on dense retrieval
 
-💾 FAISS (optional) – Efficient similarity search
+---
+
+## 🚀 Applications
+
+- AI Chatbots 🤖
+- Question Answering Systems
+- Retrieval-Augmented Generation (RAG)
+- Semantic Search Engines
+
+---
+
+## 📷 Features
+
+- Compare BM25 vs Dense Retrieval
+- Interactive search UI
+- Real-time ranking results
+- Easy-to-use web interface
+
+---
+
+## 📌 Author
+Yokitha R
